@@ -1,0 +1,78 @@
+.maps {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+}
+.marker.active + .maps {
+    opacity: 1;
+    z-index: 999;
+}
+body {
+    font-size: 16px;
+}
+a {
+    color: #333;
+}
+a:hover {
+    color: #666;
+    text-decoration: none;
+}
+.container {
+    padding-top: 50px;
+}
+.btns {
+    padding-bottom: 25px;
+}
+#location {
+    width: 30%;
+    float: left;
+}
+#location li {
+    position: relative;
+}
+#location li a {
+    padding: 10px 15px;
+    display: block;
+    border-top: 1px solid #666;
+}
+#location li.active a {
+    background-color: #eee;
+}
+#location li a span {
+    display: block;
+    font-weight: bold;
+}
+#location li a:after {
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 22px;
+
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #666;
+
+    content: '';
+}
+#locationM {
+    width: 70%;
+    float: left;
+    position: relative;
+}
+
+
+@media screen and (max-width: 650px) {
+    body {
+        font-size: 14px;
+    }
+    #locationM {
+        height: 400px;
+        padding: 0 10px;
+    }
+    .maps {
+        width: 100%;
+    }
+}
